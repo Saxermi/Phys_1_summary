@@ -27,6 +27,8 @@
 \usepackage{fancyhdr}
 \usepackage{color}
 \usepackage{amsmath}
+\usepackage[T1]{fontenc}
+
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert}
 
 
@@ -103,7 +105,715 @@ V = (5.0 \pm 0.2) \, \text{m}^3 \quad \rightarrow \quad \delta V = 4.0\%
 \]
 
 \section{Erhaltungsgrösse Energie}
+\begin{itemize}
+    \item Energie
+    \item Impuls
+    \item Drehimpuls
+\end{itemize}
 
+\bigskip
+
+\textit{Bemerkung:} \\
+Es gibt auch noch drei weitere Erhaltungsgrössen in der Physik: \\
+Elektrische Ladung, Baryonenzahl, Leptonenzahl
+
+\bigskip
+
+\textbf{\underline{Extensive}} \textbf{Zustandsgrössen} sind mengenartig, d.h. sie ändern sich mit der Grösse des betrachteten Systems (z.B: Masse, Volumen, Energie, \dots)
+
+\bigskip
+
+\textbf{\underline{Intensive}} \textbf{Zustandsgrössen} ändern sich nicht mit der Grösse des betrachteten Systems (z.B.: Temperatur, Druck, Geschwindigkeit, \dots)
+
+\bigskip
+
+\fbox{\underline{\textbf{Erhaltungsgrössen sind extensive Zustandsgrössen}}}
+\section*{Energieformen}
+
+\subsection{ Kinetische Energie}
+
+\begin{itemize}
+    \item Man braucht Kraft, um ein "Objekt schnell zu machen".
+    \item Die Energie, die man durch Ziehen in das Objekt hineinbringt, ist dann im Objekt gespeichert.
+    \item Ein Objekt mit Masse \( m \) und Geschwindigkeit \( v \) beinhaltet die kinetische Energie.
+\end{itemize}
+
+\[
+E_{\text{kin}} = \frac{mv^2}{2}
+\]
+
+\subsection{ Potenzielle Energie im Gravitationsfeld}
+
+Ein Objekt mit Masse \( m \) im Gravitationsfeld der Erde mit der Erdbeschleunigung \( g \) hat in der Höhe \( h \) die potenzielle Energie:
+
+\[
+E_{\text{pot}} = mgh
+\]
+
+\textit{Achtung:} Die potenzielle Energie ist eigentlich eine Energiedifferenz. Es gibt eine willkürliche Festlegung eines Nullpunktes mit der Höhe \( h = 0 \). Um eine Masse \( m \) von einer Höhe \( h_1 \) auf eine Höhe \( h_2 \) zu bringen, braucht man die Energie:
+
+\[
+E_{\text{pot}} = mg(h_2 - h_1)
+\]
+
+\subsection{ Federenergie}
+
+Die Energieberechnung für eine Feder geht wie folgt:
+
+\[
+E_{\text{Feder}} = \frac{k (x - L)^2}{2}
+\]
+
+\textbf{Legende:}
+\begin{itemize}
+    \item \( L \): Ruhelänge der Feder
+    \item \( x \): Länge der Feder im ausgelenkten Zustand
+    \item \( k \): Federkonstante [N/m]
+\end{itemize}
+
+\subsection{ Weitere Energieformen}
+
+\begin{itemize}
+    \item Rotationsenergie
+    \item Verschiebungsenergie
+    \item Wärmeenergie
+    \item Elektrische Energie
+    \item Magnetische Energie
+    \item Chemische Energie
+    \item \dots
+\end{itemize}
+
+\section{Erhaltungsgrösse Impuls}
+\subsection{ Definition Impuls}
+
+\[
+\vec{p} = m \cdot \vec{v}_s
+\]
+
+\begin{itemize}
+    \item \( \vec{p} \): Impuls des Körpers; Einheit: \( \text{kg} \cdot \frac{\text{m}}{\text{s}} = \text{N} \cdot \text{s} \)
+    \item \( m \): Masse des Körpers; Einheit: \( \text{kg} \)
+    \item \( \vec{v}_s \): Schwerpunktgeschwindigkeit des Körpers; Einheit: \( \frac{\text{m}}{\text{s}} \)
+\end{itemize}
+
+\bigskip
+
+\[
+\vec{p} = \begin{pmatrix} p_x \\ p_y \\ p_z \end{pmatrix} = m \begin{pmatrix} v_{sx} \\ v_{sy} \\ v_{sz} \end{pmatrix}
+\]
+
+\textit{Bemerkung:} Die Vektorkomponenten werden immer bezüglich eines orthogonalen Koordinatensystems \( (x, y, z) \) angegeben, das frei definiert werden kann.
+
+\subsubsection{ Gesamterhaltungsimpuls des Systems}
+
+\[
+\vec{p}_{\text{tot}} = \sum_i \vec{p}_i = \text{const.}
+\]
+
+\begin{itemize}
+    \item \( \vec{p}_{\text{tot}} \): Gesamtimpuls des Systems
+    \item \( \vec{p}_i \): Impuls eines einzelnen Körpers des Systems
+\end{itemize}
+
+
+\subsection{ Schwerpunktgeschwindigkeit}
+
+Ein System besteht aus mehreren Massen \( m_i \) mit den Impulsen \( \vec{p}_i \). Auf das System wirken keine äußeren Kräfte, oder die Summe der äußeren Kräfte ist gleich null. Es gilt:
+
+\[
+\vec{p}_{\text{tot}} = \sum_i \vec{p}_i = \sum_i m_i \cdot \vec{v}_i = \sum_i m_i \cdot \vec{v}_i = M \cdot \vec{v}_s = \text{const.}
+\]
+
+\begin{itemize}
+    \item \( \vec{p}_{\text{tot}} \): Gesamtimpuls des Systems
+    \item \( m_i \): Masse des \( i \)-ten Körpers im System
+    \item \( \vec{v}_i \): Geschwindigkeit des \( i \)-ten Körpers im System
+    \item \( M = \sum_i m_i \): Gesamtmasse des Systems
+    \item \( \vec{v}_s = \frac{\sum_i m_i \cdot \vec{v}_i}{\sum_i m_i} \): Schwerpunktgeschwindigkeit des Systems
+\end{itemize}
+
+\subsection{ Bestimmung des Schwerpunkts von mehreren Massen}
+
+Der Ortsvektor \( \vec{r}_s \) des Schwerpunkts eines Systems aus mehreren Massen \( m_i \) mit den Ortsvektoren \( \vec{r}_i \) ist gegeben durch:
+
+\[
+\vec{r}_s = \frac{\sum_i m_i \cdot \vec{r}_i}{\sum_i m_i}
+\]
+
+\begin{itemize}
+    \item \( \vec{r}_s \): Ortsvektor des Schwerpunkts
+    \item \( m_i \): Masse des \( i \)-ten Körpers im System
+    \item \( \vec{r}_i \): Ortsvektor des \( i \)-ten Körpers im System
+\end{itemize}
+
+\subsubsection{Beispiel:} Drei Punktmassen haben die Koordinaten:
+\begin{itemize}
+    \item \( m_1 = 1 \, \text{kg} \), \( \vec{r}_1 = (0.0, 0.0, 0.0) \, \text{m} \)
+    \item \( m_2 = 2 \, \text{kg} \), \( \vec{r}_2 = (1.0, 0.0, 0.0) \, \text{m} \)
+    \item \( m_3 = 4 \, \text{kg} \), \( \vec{r}_3 = (0.2, 0.0, 0.0) \, \text{m} \)
+\end{itemize}
+
+Der Ortsvektor des Schwerpunkts der drei Punktmassen \( \vec{r}_s \) ist:
+
+\[
+\vec{r}_s = \frac{1}{(1 \, \text{kg} + 2 \, \text{kg} + 4 \, \text{kg})} \begin{pmatrix} 1 \cdot 0 + 2 \cdot 1 + 4 \cdot 0.2 \\ 1 \cdot 0 + 2 \cdot 0 + 4 \cdot 0 \\ 1 \cdot 0 + 2 \cdot 0 + 4 \cdot 0 \end{pmatrix} = \begin{pmatrix} \frac{2}{7} \\ \frac{8}{7} \\ 0 \end{pmatrix} \, \text{m}
+\]
+\subsection{Stöße}
+
+\subsubsection{Vollkommen elastischer Stoß}
+
+\textit{Die innere Energie der Stoßpartner vor und nach dem Stoß bleibt unverändert}. Bei einem solchen Stoß in einer horizontalen Ebene bleibt somit die kinetische Energie „vor“ und „nach“ dem Stoß erhalten (Beispiel: Billardkugeln).
+
+
+\subsection{Vollkommen elastischer zentraler Stoß}
+
+Beim vollkommen elastischen zentralen Stoß bleibt sowohl der Gesamtimpuls als auch die kinetische Energie erhalten.
+
+\subsubsection{Vor dem Stoß}
+\[
+p_{\text{tot},x}^I = m_1 \cdot v_1 + m_2 \cdot v_2
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( p_{\text{tot},x}^I \): Gesamtimpuls des Systems in x-Richtung vor dem Stoß
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( v_1 \): Geschwindigkeit des ersten Stoßpartners vor dem Stoß
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( v_2 \): Geschwindigkeit des zweiten Stoßpartners vor dem Stoß
+\end{itemize}
+}
+
+\[
+E_{\text{kin, tot}}^I = \frac{m_1 v_1^2}{2} + \frac{m_2 v_2^2}{2}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( E_{\text{kin, tot}}^I \): Gesamte kinetische Energie des Systems vor dem Stoß
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( v_1 \): Geschwindigkeit des ersten Stoßpartners vor dem Stoß
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( v_2 \): Geschwindigkeit des zweiten Stoßpartners vor dem Stoß
+\end{itemize}
+}
+
+\subsubsection{Nach dem Stoß}
+\[
+p_{\text{tot},x}^{II} = m_1 \cdot \hat{v}_1 + m_2 \cdot \hat{v}_2
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( p_{\text{tot},x}^{II} \): Gesamtimpuls des Systems in x-Richtung nach dem Stoß
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( \hat{v}_1 \): Geschwindigkeit des ersten Stoßpartners nach dem Stoß
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( \hat{v}_2 \): Geschwindigkeit des zweiten Stoßpartners nach dem Stoß
+\end{itemize}
+}
+
+\[
+E_{\text{kin, tot}}^{II} = \frac{m_1 \hat{v}_1^2}{2} + \frac{m_2 \hat{v}_2^2}{2}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( E_{\text{kin, tot}}^{II} \): Gesamte kinetische Energie des Systems nach dem Stoß
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( \hat{v}_1 \): Geschwindigkeit des ersten Stoßpartners nach dem Stoß
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( \hat{v}_2 \): Geschwindigkeit des zweiten Stoßpartners nach dem Stoß
+\end{itemize}
+}
+
+\textbf{Erhaltungsgleichungen}:
+\[
+\hat{v}_1 = \frac{(m_1 - m_2) \cdot v_1 + 2 m_2 \cdot v_2}{m_1 + m_2}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \hat{v}_1 \): Geschwindigkeit des ersten Stoßpartners nach dem Stoß
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( v_1 \): Geschwindigkeit des ersten Stoßpartners vor dem Stoß
+    \item \( v_2 \): Geschwindigkeit des zweiten Stoßpartners vor dem Stoß
+\end{itemize}
+}
+
+\[
+\hat{v}_2 = \frac{(m_2 - m_1) \cdot v_2 + 2 m_1 \cdot v_1}{m_1 + m_2}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \hat{v}_2 \): Geschwindigkeit des zweiten Stoßpartners nach dem Stoß
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( v_1 \): Geschwindigkeit des ersten Stoßpartners vor dem Stoß
+    \item \( v_2 \): Geschwindigkeit des zweiten Stoßpartners vor dem Stoß
+\end{itemize}
+}
+
+\subsubsection{Geschwindigkeitsdiagramm}
+Im \( v(t) \)-Diagramm für einen vollkommen elastischen Stoß bleibt die Schwerpunktgeschwindigkeit \( v_s \) konstant. Die Relation lautet:
+\[
+v_s = \frac{v_1 + \hat{v}_1}{2} = \frac{v_2 + \hat{v}_2}{2}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( v_s \): Schwerpunktgeschwindigkeit des Systems
+    \item \( v_1 \): Geschwindigkeit des ersten Stoßpartners vor dem Stoß
+    \item \( \hat{v}_1 \): Geschwindigkeit des ersten Stoßpartners nach dem Stoß
+    \item \( v_2 \): Geschwindigkeit des zweiten Stoßpartners vor dem Stoß
+    \item \( \hat{v}_2 \): Geschwindigkeit des zweiten Stoßpartners nach dem Stoß
+\end{itemize}
+}
+
+\textbf{Hinweis:} Kennt man die Geschwindigkeit eines Körpers vor und nach dem Stoß, lässt sich die Schwerpunktgeschwindigkeit berechnen.
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Vollkommen inelastischer Stoß}
+
+Beide stoßenden Körper bewegen sich nach dem Stoß gemeinsam weiter und haben somit dieselbe Geschwindigkeit. Die innere Energie der Stoßpartner ändert sich \textit{maximal}, d.h. soweit es der Impulserhaltungssatz zulässt. Es wird Energie dissipiert oder in der Verformung „gespeichert“. In der Praxis wird hauptsächlich Wärme freigesetzt (Beispiel: Schneeball auf Auto werfen).
+\[
+\hat{v} = \frac{m_1 \cdot v_1 + m_2 \cdot v_2}{m_1 + m_2}
+\]
+
+\begin{itemize}
+    \item \( \hat{v} \): Geschwindigkeit nach dem Stoß, die der Schwerpunktgeschwindigkeit entspricht
+    \item \( m_1 \): Masse des ersten Stoßpartners
+    \item \( v_1 \): Geschwindigkeit des ersten Stoßpartners vor dem Stoß
+    \item \( m_2 \): Masse des zweiten Stoßpartners
+    \item \( v_2 \): Geschwindigkeit des zweiten Stoßpartners vor dem Stoß
+\end{itemize}
+
+Die Geschwindigkeit nach dem Stoß entspricht der Schwerpunktgeschwindigkeit. Diese bleibt bei dem Stoß erhalten, weil es keine äußeren Kräfte gibt.
+\subsection{Energie beim vollkommen inelastischen zentralen Stoß}
+
+Zwei Körper mit gleichen Massen \( m_1 = m_2 = m \) und entgegengesetzten Geschwindigkeiten \( v_2 = -v_1 = -v \) stoßen vollkommen inelastisch zusammen. Nach dem Stoß bewegen sich die Körper gemeinsam weiter oder kommen zum Stillstand.
+
+\subsubsection{Vor dem Stoß}
+\begin{itemize}
+    \item Gesamtimpuls in x-Richtung: 
+    \[
+    p_{\text{tot}, x} = m \cdot v + m \cdot (-v) = 0
+    \]
+    \item Gesamte kinetische Energie: 
+    \[
+    E_{\text{kin, tot}}^I = \frac{m v^2}{2} + \frac{m v^2}{2} = m v^2 > 0
+    \]
+\end{itemize}
+
+\subsubsection{Nach dem Stoß}
+\begin{itemize}
+    \item Gesamtimpuls in x-Richtung bleibt \( 0 \), und die gemeinsame Geschwindigkeit \( \hat{v} = 0 \).
+    \item Gesamte kinetische Energie: 
+    \[
+    E_{\text{kin, tot}}^{II} = \frac{(m + m) \cdot \hat{v}^2}{2} = 0
+    \]
+\end{itemize}
+
+\textit{Fazit:} Die kinetische Energie geht bei einem vollkommen inelastischen Stoß teilweise oder vollständig in innere Energie über (z.B. Wärme).
+
+\section{Kinematik}
+
+\subsection{Ortsvektor und Geschwindigkeit}
+
+\subsubsection{Ortsvektor}
+\[
+\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \\ z(t) \end{pmatrix}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \vec{r}(t) \): Ortsvektor in drei Dimensionen als Funktion der Zeit \( t \)
+    \item \( x(t), y(t), z(t) \): Komponenten des Ortsvektors in x-, y- und z-Richtung
+\end{itemize}
+}
+
+\subsubsection{Betrag des Ortsvektors}
+\[
+|\vec{r}(t)| = \sqrt{x^2(t) + y^2(t) + z^2(t)}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( |\vec{r}(t)| \): Betrag (Länge) des Ortsvektors
+    \item \( x(t), y(t), z(t) \): Komponenten des Ortsvektors in x-, y- und z-Richtung
+\end{itemize}
+}
+
+\subsubsection{Mittlere Geschwindigkeit (1-dimensional)}
+\[
+\bar{v}_x = \frac{\Delta x}{\Delta t} = \frac{x(t_2) - x(t_1)}{t_2 - t_1} = \frac{x(t_1 + \Delta t) - x(t_1)}{\Delta t}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \bar{v}_x \): Mittlere Geschwindigkeit in x-Richtung
+    \item \( \Delta x \): Differenz des Ortes \( x \) zwischen zwei Zeitpunkten
+    \item \( \Delta t = t_2 - t_1 \): Zeitintervall
+    \item \( x(t_1), x(t_2) \): Ort zur Zeit \( t_1 \) und \( t_2 \)
+\end{itemize}
+}
+
+\subsubsection{Momentane Geschwindigkeit (1-dimensional)}
+\[
+v_x(t) = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} = \dot{x}(t)
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( v_x(t) \): Momentane Geschwindigkeit in x-Richtung zur Zeit \( t \)
+    \item \( \Delta x \): Änderung des Ortes \( x \) in einem kleinen Zeitintervall \( \Delta t \)
+    \item \( \frac{dx}{dt} \): Ableitung des Ortes nach der Zeit (Geschwindigkeit)
+\end{itemize}
+}
+
+\subsubsection{Momentane Geschwindigkeit (3-dimensional)}
+\[
+\vec{v}(t) = \lim_{\Delta t \to 0} \frac{\Delta \vec{r}}{\Delta t} = \frac{d\vec{r}}{dt} = \dot{\vec{r}} = \begin{pmatrix} v_x(t) \\ v_y(t) \\ v_z(t) \end{pmatrix} = \begin{pmatrix} \frac{dx}{dt} \\ \frac{dy}{dt} \\ \frac{dz}{dt} \end{pmatrix}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \vec{v}(t) \): Momentane Geschwindigkeit als Vektor zur Zeit \( t \)
+    \item \( \Delta \vec{r} \): Änderung des Ortsvektors \( \vec{r} \) in einem kleinen Zeitintervall \( \Delta t \)
+    \item \( \frac{d\vec{r}}{dt} \): Ableitung des Ortsvektors nach der Zeit (Geschwindigkeitsvektor)
+    \item \( v_x(t), v_y(t), v_z(t) \): Komponenten der Geschwindigkeit in x-, y- und z-Richtung
+\end{itemize}
+}
+
+\subsubsection{Betrag der Geschwindigkeit}
+\[
+|\vec{v}(t)| = \sqrt{v_x^2(t) + v_y^2(t) + v_z^2(t)}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( |\vec{v}(t)| \): Betrag der Geschwindigkeit (auch Schnelligkeit genannt)
+    \item \( v_x(t), v_y(t), v_z(t) \): Komponenten der Geschwindigkeit in x-, y- und z-Richtung
+\end{itemize}
+}
+
+\subsection{Integration der Geschwindigkeit und Beschleunigung (3-dimensional)}
+
+\subsubsection{Ortsvektor durch Integration der Geschwindigkeit}
+\[
+\vec{r}(t) = \vec{r}(t_0) + \int_{t_0}^{t} \vec{v}(\tilde{t}) \, d\tilde{t} = \begin{pmatrix} x(t_0) + \int_{t_0}^{t} v_x(\tilde{t}) \, d\tilde{t} \\ y(t_0) + \int_{t_0}^{t} v_y(\tilde{t}) \, d\tilde{t} \\ z(t_0) + \int_{t_0}^{t} v_z(\tilde{t}) \, d\tilde{t} \end{pmatrix}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \vec{r}(t) \): Ortsvektor zur Zeit \( t \)
+    \item \( \vec{r}(t_0) \): Anfangsortsvektor zur Startzeit \( t_0 \)
+    \item \( \vec{v}(\tilde{t}) \): Geschwindigkeitsvektor als Funktion der Integrationsvariablen \( \tilde{t} \)
+    \item \( x(t_0), y(t_0), z(t_0) \): Anfangspositionen in x-, y- und z-Richtung
+    \item \( v_x(\tilde{t}), v_y(\tilde{t}), v_z(\tilde{t}) \): Komponenten der Geschwindigkeit in x-, y- und z-Richtung als Funktionen von \( \tilde{t} \)
+\end{itemize}
+}
+
+\subsubsection{Geschwindigkeitsvektor durch Integration der Beschleunigung}
+\[
+\vec{v}(t) = \vec{v}(t_0) + \int_{t_0}^{t} \vec{a}(\tilde{t}) \, d\tilde{t} = \begin{pmatrix} v_x(t_0) + \int_{t_0}^{t} a_x(\tilde{t}) \, d\tilde{t} \\ v_y(t_0) + \int_{t_0}^{t} a_y(\tilde{t}) \, d\tilde{t} \\ v_z(t_0) + \int_{t_0}^{t} a_z(\tilde{t}) \, d\tilde{t} \end{pmatrix}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \vec{v}(t) \): Geschwindigkeitsvektor zur Zeit \( t \)
+    \item \( \vec{v}(t_0) \): Anfangsgeschwindigkeitsvektor zur Startzeit \( t_0 \)
+    \item \( \vec{a}(\tilde{t}) \): Beschleunigungsvektor als Funktion der Integrationsvariablen \( \tilde{t} \)
+    \item \( v_x(t_0), v_y(t_0), v_z(t_0) \): Anfangsgeschwindigkeiten in x-, y- und z-Richtung
+    \item \( a_x(\tilde{t}), a_y(\tilde{t}), a_z(\tilde{t}) \): Komponenten der Beschleunigung in x-, y- und z-Richtung als Funktionen von \( \tilde{t} \)
+\end{itemize}
+}
+
+
+
+\section{Bilanzen}
+
+\subsection{Volumenbilanz in der Hydraulik}
+\[
+\frac{dV(t)}{dt} = I_v(t)
+\]
+\begin{itemize}
+    \item \( V(t) \): Volumen des Systems zur Zeit \( t \)
+    \item \( I_v(t) \): Volumenstrom (Flussrate) in \( m^3/s \)
+\end{itemize}
+
+\subsection{Momentanbilanz bei mehreren Zu- und Abflüssen}
+\[
+\frac{dV(t)}{dt} = \sum_{i=1}^n I_{v,i}(t)
+\]
+\begin{itemize}
+    \item \( I_{v,i}(t) \): Volumenstrom des \( i \)-ten Flusses
+\end{itemize}
+
+\subsection{Energiebilanz}
+\[
+\frac{dU(t)}{dt} = \sum_{i=1}^n I_{W,i}(t)
+\]
+\begin{itemize}
+    \item \( U(t) \): Innere Energie des Systems
+    \item \( I_{W,i}(t) \): Energiestrom \( i \) (Zufluss oder Abfluss von Energie)
+\end{itemize}
+
+\subsection{Leistung und Energiestrom}
+\[
+P = \frac{dE}{dt} = I_W
+\]
+\begin{itemize}
+    \item \( P \): Leistung, auch als Energiestrom bezeichnet
+    \item \( E \): Energie des Systems
+\end{itemize}
+
+\subsection{Wirkungsgrad}
+\[
+\eta = \frac{\text{gewünschte Leistung}}{\text{eingebrachte Leistung}}
+\]
+\begin{itemize}
+    \item \( \eta \): Wirkungsgrad (zwischen 0 und 1)
+\end{itemize}
+
+\subsection{Impulsbilanz}
+\[
+\frac{d\vec{p}_{\text{tot}}(t)}{dt} = \sum_{i=1}^n I_{p,i}(t)
+\]
+\begin{itemize}
+    \item \( \vec{p}_{\text{tot}}(t) \): Gesamtimpuls des Systems
+    \item \( I_{p,i}(t) \): Impulsstrom \( i \)
+\end{itemize}
+\section{Energie, Impulsströme & Kraft}
+
+\subsection{Kinetische Energie (1-d)}
+\[
+E_{\text{kin}} = \frac{p_x^2}{2m} = \frac{m \cdot v_x^2}{2}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( E_{\text{kin}} \): Kinetische Energie des Körpers
+    \item \( p_x \): Impuls des Körpers in x-Richtung
+    \item \( m \): Masse des Körpers
+    \item \( v_x \): Geschwindigkeit in x-Richtung
+\end{itemize}
+}
+
+\subsection{Änderung der kinetischen Energie und Impulsstrom}
+\[
+\frac{dE_{\text{kin}}}{dt} = v_x \cdot I_{p_x}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \frac{dE_{\text{kin}}}{dt} \): Zeitliche Änderung der kinetischen Energie
+    \item \( v_x \): Geschwindigkeit in x-Richtung
+    \item \( I_{p_x} \): Impulsstrom in x-Richtung
+\end{itemize}
+}
+
+\subsection{Potentielle Energie im Gravitationsfeld (1-d)}
+\[
+E_{\text{pot}} = m \cdot g \cdot z
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( E_{\text{pot}} \): Potentielle Energie des Körpers
+    \item \( m \): Masse des Körpers
+    \item \( g \): Erdbeschleunigung
+    \item \( z \): Höhe des Körpers im Bezugssystem
+\end{itemize}
+}
+
+\subsection{Änderung der potentiellen Energie}
+\[
+\frac{dE_{\text{pot}}}{dt} = -F_z \cdot v_z
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \frac{dE_{\text{pot}}}{dt} \): Zeitliche Änderung der potentiellen Energie
+    \item \( F_z \): Kraft in z-Richtung
+    \item \( v_z \): Geschwindigkeit in z-Richtung
+\end{itemize}
+}
+
+\subsection{Energieerhaltung im freien Fall}
+\[
+\frac{p_1^2}{2m} + m \cdot g \cdot z_1 = \frac{p_2^2}{2m} + m \cdot g \cdot z_2
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( p_1, p_2 \): Impulse des Körpers an den Positionen \( z_1 \) und \( z_2 \)
+    \item \( z_1, z_2 \): Höhen des Körpers an zwei verschiedenen Zeitpunkten
+\end{itemize}
+}
+
+\subsection{Newtonsche Kraft und Impulsstrom}
+\[
+\frac{d\vec{p}}{dt} = \vec{F}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \frac{d\vec{p}}{dt} \): Änderungsrate des Impulses (Impulsstrom)
+    \item \( \vec{F} \): Kraft
+\end{itemize}
+}
+
+\subsection{Bewegungsgleichung eines Körpers im Gravitationsfeld (3-d)}
+\[
+\vec{F} = m \cdot \vec{a}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \vec{F} \): Gesamtkraft auf den Körper
+    \item \( m \): Masse des Körpers
+    \item \( \vec{a} \): Beschleunigung des Körpers
+\end{itemize}
+}
+\section{Reibung
+\& offene Systeme}
+
+\subsection{Arbeit entlang eines Weges}
+\[
+W_{AB} = \int_A^B \vec{F} \cdot d\vec{r} = \int_{t_A}^{t_B} \vec{F} \cdot \vec{v} \, dt
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( W_{AB} \): Arbeit, die durch die Kraft \( \vec{F} \) entlang des Weges von \( A \) nach \( B \) verrichtet wird
+    \item \( \vec{F} \): Wirksame Kraft entlang des Weges
+    \item \( \vec{r} \): Ortsvektor
+    \item \( \vec{v} \): Geschwindigkeit
+\end{itemize}
+}
+
+\subsection{Arbeit einer konstanten Kraft entlang einer geraden Bahn}
+\[
+W_{AB} = F \cdot \cos(\alpha) \cdot s_{AB}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( F \): Betrag der konstanten Kraft
+    \item \( \alpha \): Winkel zwischen der Kraft und der geradlinigen Bahn
+    \item \( s_{AB} \): Distanz zwischen den Punkten \( A \) und \( B \)
+\end{itemize}
+}
+
+\subsection{Energiestrom im offenen System}
+\[
+\frac{dE}{dt} = \vec{F}_{\text{ext}} \cdot \vec{v} = I_{\text{W ext}}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \frac{dE}{dt} \): Energiestrom (zeitliche Änderung der Energie)
+    \item \( \vec{F}_{\text{ext}} \): Externe Kraft, die auf das System wirkt
+    \item \( \vec{v} \): Geschwindigkeit des Körpers
+    \item \( I_{\text{W ext}} \): Energiestrom durch die Systemgrenze
+\end{itemize}
+}
+
+\subsection{Impulsstrom im offenen System}
+\[
+\frac{d\vec{p}}{dt} = \vec{F}_{\text{pot}} + \vec{F}_{\text{ext}}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \frac{d\vec{p}}{dt} \): Zeitliche Änderung des Impulses (Impulsstrom)
+    \item \( \vec{F}_{\text{pot}} \): Potentialkraft
+    \item \( \vec{F}_{\text{ext}} \): Externe Kraft
+\end{itemize}
+}
+
+\subsection{Luftwiderstandskraft}
+\[
+\vec{F}_R = -\frac{1}{2} \rho \cdot v^2 \cdot A \cdot c_w \cdot \frac{\vec{v}}{|\vec{v}|}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \vec{F}_R \): Luftwiderstandskraft
+    \item \( \rho \): Dichte des Mediums (z.B. Luft)
+    \item \( v \): Betrag der Geschwindigkeit
+    \item \( A \): Stirnfläche des Körpers senkrecht zur Geschwindigkeit
+    \item \( c_w \): Widerstandsbeiwert
+\end{itemize}
+}
+
+\subsection{Maximale Geschwindigkeit beim vertikalen Wurf mit Luftwiderstand}
+\[
+v_{\infty} = \sqrt{\frac{2 \cdot m \cdot g}{\rho \cdot A \cdot c_w}}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( v_{\infty} \): Maximale Geschwindigkeit des Körpers
+    \item \( m \): Masse des Körpers
+    \item \( g \): Erdbeschleunigung
+    \item \( \rho \): Dichte des Mediums (z.B. Luft)
+    \item \( A \): Stirnfläche des Körpers senkrecht zur Geschwindigkeit
+    \item \( c_w \): Widerstandsbeiwert
+\end{itemize}
+}
+\section{Kraftstoss & Impuls}
+
+\subsection{Impulsänderung durch Kraftstoß}
+\[
+\Delta \vec{p} = \int_{t_A}^{t_B} \vec{F} \, dt
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \Delta \vec{p} \): Änderung des Impulses zwischen den Zeitpunkten \( t_A \) und \( t_B \)
+    \item \( \vec{F} \): Kraft, die auf den Körper wirkt
+\end{itemize}
+}
+
+\subsection{Impulsänderung bei konstanter Kraft (1-d)}
+\[
+\Delta p_{AB} = F_{\text{const}} \cdot \Delta t_{AB}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \Delta p_{AB} \): Impulsänderung zwischen den Punkten \( A \) und \( B \)
+    \item \( F_{\text{const}} \): Konstante Kraft
+    \item \( \Delta t_{AB} \): Zeitdauer zwischen \( t_A \) und \( t_B \)
+\end{itemize}
+}
+
+\subsection{Federkraft und Federenergie}
+\[
+F = -k \cdot (L - x)
+\]
+\[
+E_{\text{Feder}} = \frac{1}{2} k \cdot (L - x)^2
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( F \): Federkraft
+    \item \( k \): Federkonstante
+    \item \( L \): Ruhelänge der Feder
+    \item \( x \): Aktuelle Länge der Feder
+    \item \( E_{\text{Feder}} \): In der Feder gespeicherte Energie
+\end{itemize}
+}
+
+\subsection{Elastischer Stoß mit maximaler Verformung}
+\[
+\Delta x_{\text{max}} = \frac{p_0}{m \cdot \omega}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \Delta x_{\text{max}} \): Maximale Verformung der Feder beim Stoß
+    \item \( p_0 \): Anfangsimpuls
+    \item \( m \): Masse des Körpers
+    \item \( \omega = \sqrt{\frac{k}{m}} \): Kreisfrequenz der Schwingung
+\end{itemize}
+}
+
+\subsection{Stoßdauer und maximale Stoßkraft}
+\[
+\Delta t_{\text{Stoß}} = \frac{\pi}{\omega}
+\]
+\[
+F_{\text{max}} = k \cdot \Delta x_{\text{max}}
+\]
+{\footnotesize
+\begin{itemize}
+    \item \( \Delta t_{\text{Stoß}} \): Dauer des Stoßes
+    \item \( F_{\text{max}} \): Maximale Stoßkraft
+\end{itemize}
+}
 
 
 		\end{multicols*}{3}
