@@ -1,0 +1,112 @@
+% Use extarticle for the smaller font size:
+% https://tex.stackexchange.com/questions/5339/how-to-specify-font-size-less-than-10pt-or-more-than-12pt
+\documentclass[a4paper, 8pt]{extarticle}
+
+% Multi-column layout
+\usepackage{multicol}
+
+% Manually set page margins
+\usepackage[margin=0.5cm]{geometry}
+
+% Manually set margins on lists
+\usepackage{enumitem}
+% Change list margins - https://tex.stackexchange.com/questions/10684/vertical-space-in-lists
+\setlist{leftmargin=3mm, nosep}
+% or \setlist{noitemsep} to leave space around whole list
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{xcolor} % Paket für Farben
+\usepackage{mathtools} % Für die 'dcases' Umgebung
+\usepackage{rotating} % Paket für die Drehung
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{amsmath}
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+
+
+\newcommand{\dx}{\hspace{2pt}dx} %% für saubere darstellung der tabelle
+\newcommand{\dd}[1]{\hspace{2pt}d#1}
+
+\begin{document}
+\begin{landscape}
+\section*{\hspace{10cm} Physik 1 Zusammenfassung MT/EU \hspace{8cm} \small Seite 1}
+\section*{ \hspace{10cm} Autor: Michael Saxer DS22A}	% 4-column layout
+	\begin{multicols*}{3}
+\section{Statistische Masse und fehlerfortpflanzung}
+n Messresultate \( x_1, \dots, x_n \), die sich aufgrund von statistischen Fehlern unterscheiden
+
+\bigskip
+
+\textbf{Mittelwert:}
+\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i
+\]
+
+\bigskip
+
+\textbf{Standardabweichung (Stichprobe):}
+\[
+\sigma = \sqrt{\frac{1}{n - 1} \sum_{i=1}^n (x_i - \bar{x})^2}
+\]
+
+\bigskip
+
+\textbf{Absoluter Fehler des Mittelwertes:}
+\[
+\Delta = \frac{1}{\sqrt{n}} \cdot \sigma
+\]
+\subsection{REGELN:}
+
+1.) Addition und Subtraktion: Die \textbf{absoluten} Messunsicherheiten addieren sich.
+\[
+\text{Bsp: } a = x + 3y - \frac{1}{6} z \rightarrow \Delta a = \Delta x + 3 \Delta y + \frac{1}{6} \Delta z
+\]
+
+2.) Multiplikation und Division: Die \textbf{relativen} Messunsicherheiten addieren sich.
+\[
+\text{Bsp: } a = \frac{3 \cdot x \cdot y}{z} \rightarrow \delta a = \delta x + \delta y + \delta z
+\]
+
+3.) Potenzierte Grössen: Die \textbf{relative} Messunsicherheit wird mit der Potenz multipliziert.
+\[
+\text{Bsp: } a = \frac{x \cdot y^5}{\sqrt{z}} \rightarrow \delta a = \delta x + 5 \cdot \delta y + \frac{1}{2} \delta z \quad \text{(Hinweis: } \sqrt{z} = z^{1/2}\text{)}
+\]
+
+\bigskip
+
+\subsection{Beispielsaufgabe:} 
+Die Dichte \( \rho = \frac{m}{V} \) eines Stoffes wird durch eine Messung der Masse \( m \) und eine Messung des Volumens \( V \) bestimmt, wobei \( m \) und \( V \) fehlerbehaftet sind. Wie gross ist der absolute Fehler der Dichte?
+
+\[
+m = (20.0 \pm 0.5) \, \text{kg} \quad \rightarrow \quad \delta m = 2.5\%
+\]
+\[
+V = (5.0 \pm 0.2) \, \text{m}^3 \quad \rightarrow \quad \delta V = 4.0\%
+\]
+
+\[
+\rho = \frac{m}{V} = \frac{20 \, \text{kg}}{5 \, \text{m}^3} = 4 \, \text{kg/m}^3
+\]
+
+\[
+\delta \rho = \delta m + \delta V = 6.5\% \quad \rightarrow \quad \Delta \rho = \delta \rho \cdot \rho = 0.065 \cdot 4 \, \text{kg/m}^3 = 0.26 \, \text{kg/m}^3
+\]
+
+\[
+\rho = (4.0 \pm 0.26) \, \text{kg/m}^3
+\]
+
+\section{Erhaltungsgrösse Energie}
+
+
+
+		\end{multicols*}{3}
+
+\end{landscape}
+\end{document}
